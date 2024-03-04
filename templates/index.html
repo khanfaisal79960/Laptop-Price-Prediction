@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <title>Laptop Price Prediction</title>
+</head>
+<body>
+    <div class="form-body">
+        <div class="row">
+            <div class="form-holder">
+                <div class="form-content">
+                    <div class="form-items">
+                        <h3>Laptop Price Prediction</h3>
+                        <p>Fill in the details below below.</p>
+                        <form class="requires-validation" novalidate action="/" method="post" enctype="multipart/form-data">
+                            <div class="col-md-12">
+                                <select class="form-select" aria-label="Default select example" id="company" name="company">
+                                    <option selected>Select Company</option>
+                                    {% for option in company %}
+                                        <option value="{{ company.index(option) }}">{{ option }}</option>
+                                    {% endfor %}
+                                  </select>
+                            </div>
+
+                            <div class="col-md-12">
+                                <input type="text" class="form-control" id="inches" name="inches" aria-describedby="basic-addon3" placeholder="Enter Screen Size in Inches">
+                            </div>
+
+                            <div class="col-md-12">
+                                <select class="form-select" aria-label="Default select example" id="typename" name="typename">
+                                    <option selected>Select Type</option>
+                                    {% for option in typenames %}
+                                        <option value="{{ typenames.index(option) }}">{{ option }}</option>
+                                    {% endfor %}
+                                  </select>
+                            </div>
+
+                            <div class="col-md-12">
+                                <select class="form-select" aria-label="Default select example" id="resolution" name="resolution">
+                                    <option selected>Select Resolutoin</option>
+                                    {% for option in resolution %}
+                                        <option value="{{ resolution.index(option) }}">{{ option }}</option>
+                                    {% endfor %}
+                                  </select>
+                            </div>
+
+                            <div class="col-md-12">
+                                <select class="form-select" aria-label="Default select example" id="cpu" name="cpu">
+                                    <option selected>Select CPU</option>
+                                    {% for option in cpu %}
+                                        <option value="{{ cpu.index(option) }}">{{ option }}</option>
+                                    {% endfor %}
+                                  </select>
+                            </div>
+
+                            <div class="col-md-12">
+                                <select class="form-select" aria-label="Default select example" id="ram" name="ram">
+                                    <option selected>Select RAM</option>
+                                    {% for option in ram %}
+                                        <option value="{{ ram.index(option) }}">{{ option }}</option>
+                                    {% endfor %}
+                                  </select>
+                            </div>
+
+                            <div class="col-md-12">
+                                <select class="form-select" aria-label="Default select example" id="memory" name="memory">
+                                    <option selected>Select Memory</option>
+                                    {% for option in memory %}
+                                        <option value="{{ memory.index(option) }}">{{ option }}</option>
+                                    {% endfor %}
+                                  </select>
+                            </div>
+                            
+                            <div class="col-md-12">
+                                <select class="form-select" aria-label="Default select example" id="gpu" name="gpu">
+                                    <option selected>Select GPU</option>
+                                    {% for option in gpu %}
+                                        <option value="{{ gpu.index(option) }}">{{ option }}</option>
+                                    {% endfor %}
+                                  </select>
+                            </div>
+
+                            <div class="col-md-12">
+                                <select class="form-select" aria-label="Default select example" id="os" name="os">
+                                    <option selected>Select OS</option>
+                                    {% for option in opsys %}
+                                        <option value="{{ opsys.index(option) }}">{{ option }}</option>
+                                    {% endfor %}
+                                  </select>
+                                  <br><br>
+                                  <div class="d-flex justify-content-center">
+                                      <button class="btn btn-success" type="submit">submit</button>
+                                  </div>
+                            </div>
+                        </form>
+                        <br><br>
+                        <div class="container">
+                            {% if prediction %}
+                            <p>Predicted Price is {{ prediction }} Euros</p>
+                            {% endif %}
+                        </div>
+                        <br><br>
+                        <div style="margin-left: 20px;">
+                        <p>Mady By: Khan Faisal</p>
+                        <a href="https://khanfaisal.netlify.app" class="nav-link px-2 text-muted">Portfolio</a>
+                        ><a href="https://www.linkedin.com/in/khanfaisal79960" class="nav-link px-2 text-muted">Linkedin</a>
+                        ><a href="https://github.com/khanfaisal79960" class="nav-link px-2 text-muted">Github</a>
+                        ><a href="https://medium.com/@khanfaisal79960" class="nav-link px-2 text-muted">Medium</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+</body>
+</html>
