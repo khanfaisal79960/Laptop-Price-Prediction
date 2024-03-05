@@ -72,4 +72,5 @@ Technologies used in the project:
 *   pillow
 *   gunicorn
 *   Jinja2
-*   ultralytics (YOLO)
+*   scikit-learn
+  
