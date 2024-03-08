@@ -6,7 +6,7 @@
 
 <h2>🚀 Demo</h2>
 
-[https://laptop-price-prediction-deac.onrender.com/](https://laptop-price-prediction-deac.onrender.com/)
+[https://laptop-price-predictor.replit.app](https://laptop-price-predictor.replit.app)
 
 <h2>Project Screenshots:</h2>
 
